@@ -1,0 +1,677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mmexport</title>
+<style>
+*{
+	margin:0;padding:0;
+}
+ul{
+	list-style:none;
+}
+a{text-decoration: none;color:#000;}	
+a:hover{color:#75A7DC;}
+.header{
+	height:57px;
+	background-color:#FFf;
+	border:1px solid #d5d5d5;
+}
+.h_inner{
+	width:835px;
+	margin:0 auto;
+}
+.logo{
+	width:170px;
+	height:39px;
+	float:left;
+	margin-top:9px;
+}
+.nav_list{
+	float:right;
+}
+.nav_list li{
+	font-size:16px;
+	line-height:57px;
+	float:left;
+	padding-right:45px;
+}
+.nav_list .li_last{
+	font-size:16px;
+	line-height:57px;
+	float:left;
+	padding-right:30px;
+}
+.banner{
+	height:765px;
+	background-color:#f2f2f2;
+}
+.b_inner{
+	height:765px;
+	width:835px;
+	margin:0 auto;
+}
+.b_inner p{
+	line-height:36px;
+	font-size:12px;
+	color:#7b7b7d;
+}
+.b_top{
+	height:228px;
+	background-color:#fff;
+}
+.b_top h3{
+	line-height:41px;
+	padding:0 0 12px 13px;
+}
+.b_top ul{
+	height:80px;
+	padding-bottom:20px;
+}
+.b_top .ul_pic{
+	width:119px;
+	height:80px;
+	float:left;
+}
+.b_top .b_top_pic{
+	width:119px;
+	height:52px;
+	text-align:center;
+}
+.b_top p{
+	line-height:28px;
+	font-size:12px;
+	text-align:center;
+	color:#68686a;
+}
+.b_top .ul_text{
+	height:76px;
+	border-top:1px solid #f8f8f8;
+	padding-left:36px;
+}
+.b_top .ul_text .ul_text_li{
+	line-height:76px;
+	float:left;
+}
+.b_top .ul_text li span{
+	padding:0 20px;
+}
+.b_mid{
+	height:188px;
+	background-color:#fff;
+	margin:12px 0;
+}
+.b_mid .b_mid_sic{
+	height:40px;
+	margin-bottom:15px;
+}
+.b_mid .b_mid_sic h3{
+	margin:13px 0 0 11px;
+	float:left;
+}
+.b_mid .b_mid_sic .b_mid_chazhao{
+	width:240px;
+	height:26px;
+	line-height:26px;
+	background:url(images/chazhao_03.jpg) no-repeat right center;
+	border:1px solid #ececec;
+	margin-top:13px;
+	margin-right:12px;
+	float:right;
+}
+.b_mid .b_mid_text{
+	height:24px;
+	padding-left:15px;
+}
+.b_mid .b_mid_text .b_mid_text_list{
+	line-height:24px;
+	width:108px;
+	font-size:11px;
+	padding-right:27px;
+	float:left;
+}
+.b_mid .b_mid_btn{
+	width:184px;
+	height:44px;
+	background:#ed702e url(images/mmexport_shoujinanniu_07.jpg) no-repeat 52px 16px;
+	margin:23px 0 0 325px;
+}
+.b_mid .b_mid_btn p{
+	color:#fbd3b0;
+	padding:5px 0 0 64px;
+}
+.b_bot{
+	height:177px;
+}
+.b_bot .b_bot_fankui{
+	height:37px;
+	background-color:#fff;
+	margin-bottom:1px;
+}
+.b_bot .b_bot_fankui h3{
+	margin:8px 0 0 11px;
+	float:left;
+}
+.b_bot .b_bot_fankui p{
+	font-size:12px;
+	line-height:38px;
+	float:right;
+	margin-right:12px;
+}
+.b_bot .b_bot_fankui p span{
+	color:#4b74a0;
+}
+
+.b_bot .b_bot_fangshi{
+	height:239px;
+}
+.b_bot .b_bot_fs_left{
+	width:277px;
+	height:239px;
+	background-color:#fff;
+	float:left;
+}
+
+.b_bot .b_bot_fs_left p{
+	text-align:center;
+}
+.b_bot .b_bot_fs_left .yijian{
+	font-size:14px;
+	text-align:left;
+	padding:18px 0 0 13px;
+}
+.b_bot .b_bot_fs_mid .yijian{
+	font-size:14px;
+	text-align:left;
+	padding:18px 0 0 13px;
+}
+.b_bot .b_bot_fs_right .yijian{
+	font-size:14px;
+	text-align:left;
+	padding:18px 0 0 13px;
+}
+.b_bot .b_bot_fs_left .ipxiazai{
+	width:168px;
+	height:42px;
+	background:#75a7dc url(images/xiazai_03.jpg) no-repeat 30px 10px;
+	margin-left:55px;
+}
+.b_bot .b_bot_fs_left .ipxiazai p{
+	margin-left:22px;
+}
+.b_bot .b_bot_fs_left .wandouxiazai{
+	width:168px;
+	height:42px;
+	background:#8db35c url(images/xiazai_07.jpg) no-repeat 30px 10px;
+	margin-left:55px;
+}
+.b_bot .b_bot_fs_left .wandouxiazai p{
+	margin-left:22px;
+}
+
+.b_bot_fangshi .b_bot_fs_mid{
+	background-color:#fff;
+	width:277px;
+	height:239px;
+	float:left;
+	margin:0 1px;
+}
+
+.b_bot_fangshi .b_bot_fs_mid .sjh{
+	line-height:18px;
+	font-size:12px;
+	margin:12px 0 0 13px;
+}
+.b_bot_fangshi .b_bot_fs_mid .shoujiid{
+	width:234px;
+	height:22px;
+	font-size:12px;
+	line-height:22px;
+	border:2px solid #eceee9;
+	margin:12px 0 0 13px;
+	
+}
+.yanzhengma{
+	width:238px;
+	height:28px;
+	margin:12px 0 0 13px;
+}
+.yzm{
+	width:180px;
+	height:24px;
+	border:1px solid #eceee9;
+	float:left;
+}
+.yzmpic{
+	border:1px solid #eceee9;
+	float:right;
+}
+.b_bot_fs_mid .kanbuqing{
+	color:#3A48E9;
+	margin-left:170px;
+}
+.fason{
+	width:74px;
+	height:26px;
+	background-color:#f26e2e;
+	margin-left:102px;
+}
+.fason p{
+	line-height:26px;
+	font-size:12px;
+	text-align:center;
+}
+.b_bot_fs_right{
+	width:279px;
+	height:239px;
+	background-color:#fff;
+	float:left;
+}
+.b_bot_fs_right p{
+	line-height:18px;
+	font-size:12px;
+	margin:12px 0 0 13px;
+}
+.b_bot_fs_right .pic{
+	text-align:center;
+	margin:12px 0 0 13px;
+}
+
+.main{
+	background-color:#333;
+}
+
+.footbuju{
+	width:835px;
+	margin:0 auto;
+	padding-top:25px;
+	
+}
+.f_inter{
+	height:280px;
+}
+.f_inter .list{
+	width:139px;
+	float:left;
+	color:#abaab0;
+}
+.f_inter .list h3{
+	line-height:24px;
+	height:24px;
+	font-size:12px;
+}
+.f_inter .list li{
+	line-height:24px;
+	height:24px;
+	color:#abaab0;
+	font-size:12px;
+}
+.f_inter .xialadan{
+	width:136px;
+	height:24px;
+	color:#abaab0;
+	border:1px solid #424740;
+	background-image:url(images/diqiu_03.jpg);
+	background-position:8px center;
+	background-repeat:no-repeat;
+	margin-bottom:12px;
+}
+.f_inter .xialadan h3{
+	line-height:24px;
+	height:24px;
+	font-size:12px;
+	font-weight:normal;
+	background:url(images/xiasanjiao_03.jpg) no-repeat 120px center;
+	padding-left:28px;
+}
+.f_inter .list .bg1{
+	background:url(images/xiaotub_03.jpg) no-repeat 8px center;
+	line-height:24px;
+	color:#abaab0;
+	font-size:12px;
+	padding-left:28px;
+}
+.f_inter .list .bg2{
+	background:url(images/xiaotub_06.jpg) no-repeat 8px center;
+	line-height:24px;
+	color:#abaab0;
+	font-size:12px;
+	padding-left:28px;
+}
+.f_inter .list .bg3{
+	background:url(images/xiaotub_09.jpg) no-repeat 8px center;
+	line-height:24px;
+	color:#abaab0;
+	font-size:12px;
+	padding-left:28px;
+}
+.f_inter .list .bg4{
+	background:url(images/xiaotub_11.jpg) no-repeat 8px center;
+	line-height:24px;
+	color:#abaab0;
+	font-size:12px;
+	padding-left:28px;
+}
+.f_inter .list .bg5{
+	background:url(images/xiaotub_14.jpg) no-repeat 8px center;
+	line-height:24px;
+	color:#abaab0;
+	font-size:12px;
+	padding-left:28px;
+}
+.f_inter .list .bg6{
+	background:url(images/xiaotub_17.gif) no-repeat 8px center;
+	line-height:24px;
+	color:#abaab0;
+	font-size:12px;
+	padding-left:28px;
+}
+
+.f_bot .link{
+	height:37px;
+	border:1px dotted #565656;
+	background:url(images/xiasanjiao_03.jpg) no-repeat 965px center;
+}
+.f_bot .link ul{
+	padding-left:10px;
+}
+.f_bot .link li{
+	line-height:32px;
+	height:32px;
+	font-size:9px;
+	color:#abaab0;
+	float:left;
+}
+.f_bot .link .touming{
+	color:#6a605e;
+}
+.f_bot .link span{
+	line-height:36px;
+	height:36px;
+	font-size:9px;
+	color:#abaab0;
+	margin:0px 1px;
+}
+
+.footer{
+	height:117px;
+	background-color:#333;
+}
+.banquan{
+	width:835px;
+	margin:0 auto;
+}
+.banquan .bq_left{
+	width:500px;
+	height:117px;
+	background:url(images/f_bot_13.jpg) no-repeat left center;
+	float:left;
+}
+.banquan .bq_left p{
+	width:500px;
+	line-height:19px;
+	font-size:10px;
+	color:#abaab0;
+	padding:30px 133px;
+}
+.banquan .bq_right{
+	height:117px;
+	float:right;
+	text-align:center;
+	padding-top:36px;
+}
+.banquan .bq_right img{
+	margin-left:20px;
+}
+</style>
+
+</head>
+<body>
+<div class="header">
+	<div class="h_inner">
+    	<div class="logo"><img src="images/uclogo.png" /></div>
+        	<ul class="nav_list">
+	            <li><a href="index.html">首页</a></li>
+	            <li><a href="last.html">下载</a></li>
+	            <li><a href="uc.html">公司</a></li>
+	            <li><a href="company.html">合作</a></li>
+	            <li>社区</li>
+	            <li class="nav_li_last">帮助</li>
+            </ul>
+    </div>
+</div>
+<div class="banner">
+	<div class="b_inner">
+    	<p>首页> 产品选择</p>
+        <div class="b_top">
+        <h3>热门下载</h3>
+        	<ul>
+            	<li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_bo_b_top_03.jpg" /></div>
+                    <p>电脑版</p>
+                </li>
+                <li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_b_top_05.jpg" /></div>
+                    <p>Android</p>
+                </li>
+                <li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_b_top_07.jpg" /></div>
+                    <p>IOS(iPhone)</p>
+                </li>
+                <li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_bo_b_top_05.jpg" /></div>
+                    <p>IOS(iPad)</p>
+                </li>
+                <li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_bo_b_top_07.jpg" /></div>
+                    <p>TV版</p>
+                </li>
+                <li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_bo_b_top_09.jpg" /></div>
+                    <p>WP</p>
+                </li>
+                <li class="ul_pic">
+                	<div class="b_top_pic"><img src="images/mmexport_b_top_09.jpg" /></div>
+                    <p>电脑版</p>
+                </li>
+                
+            </ul>
+            <ul class="ul_text">
+            	<li class="ul_text_li">JAVA<span>|</span></li>
+                <li class="ul_text_li">Symbian<span>|</span></li>
+                <li class="ul_text_li">WM(PPC/SP)<span>|</span></li>
+                <li class="ul_text_li">Meego<span>|</span></li>
+                <li class="ul_text_li">斯凯mrp<span>|</span></li>
+                <li class="ul_text_li">Blackberry<span>|</span></li>
+                <li class="ul_text_li">Ophone<span>|</span></li>
+                <li class="ul_text_li">WinPad</li>
+            </ul>
+
+        </div>
+        <div class="b_mid">
+        	<div class="b_mid_sic">
+            	<h3>按机型下载</h3>
+                <div class="b_mid_chazhao">输入手机型号：如N97</div>
+            </div>
+        	<ul class="b_mid_text">
+            	<li class="b_mid_text_list">iPhone 5S</li>
+                <li class="b_mid_text_list">GALAXY Note 3</li>
+                <li class="b_mid_text_list">G6-UOO</li>
+                <li class="b_mid_text_list">galaxy s4 sgh-i337</li>
+                <li class="b_mid_text_list">iPhone 5C</li>
+                <li class="b_mid_text_list">MX3</li>
+            </ul>
+            <ul class="b_mid_text">
+            	<li class="b_mid_text_list">MI3</li>
+                <li class="b_mid_text_list">P6-UO6</li>
+                <li class="b_mid_text_list">Xperia Z1</li>
+                <li class="b_mid_text_list">One</li>
+                <li class="b_mid_text_list">vivo Xplay</li>
+                <li class="b_mid_text_list">GALAXY Note2</li>
+            </ul>
+            <div class="b_mid_btn"><p>更多手机型号<p></div>
+        </div>
+        <div class="b_bot">	
+       	  <div class="b_bot_fankui">
+           	<h3>其他下载方式</h3>
+            	<p>如无法下载或其他建议请给我们<span>反馈</span></p>
+        	</div>
+            <div class="b_bot_fangshi">
+            	<div class="b_bot_fs_left">
+                	<h3 class="yijian">一键下载</h3>
+                    <p>IPhone(仅支持越狱手机)</p>
+                    <div class="ipxiazai">
+                    	<p>PP助手一键下载</p>
+                    </div>
+                    <p>Andsoid手机</p>
+                    <div class="wandouxiazai">
+                    	<p >豌豆荚一键下载</p>
+                    </div>
+                </div>
+                <div class="b_bot_fs_mid">
+                	<h3 class="yijian">短信下载</h3>
+                    <p class="sjh">输入你的手机号,我们会发送一条短信到你手机点击短信中的网址即可下载UC浏览器</p>
+                    <div class="shoujiid">在输入您的手机号码</div>
+                    <div class="yanzhengma">
+                    	<div class="yzm">输入验证码</div>
+                        <div class="yzmpic"><img src="images/yanzhengmapic_07.jpg" /></div>
+                    </div>
+                    <p class="kanbuqing">看不清楚？换一张</p>
+                    <div class="fason"><p>发送</p></div>
+                </div>
+                <div class="b_bot_fs_right">
+                	<h3 class="yijian">二维码下载</h3>
+                    <p>使用手机二维码软件扫描下图，即可下载UC浏览器</p>
+                    <div class="pic">
+                    	<img src="images/erweima_03.jpg" />
+                    	<p>手机访问wap.uc.cn</p>
+                    </div>
+                    
+                </div>
+            </div>
+      </div>
+    </div>
+</div>
+<div class="main">
+<div class="footbuju">
+		<div class="f_inter">
+         <div class="list">
+              <h3>UC浏览器</h3>
+              <ul>
+                  <li>产品动态</li>
+                  <li>功能介绍</li>
+                  <li>安卓浏览器</li>
+                  <li>IPhone浏览器</li>
+                  <li>电脑浏览器</li>
+                  <li>WP浏览器</li>
+                  <li>IPad浏览器</li>
+                  <li>aPad浏览器</li>
+                  <li>TV浏览器</li>
+                  <li>塞班浏览器</li>
+                  
+              </ul>
+          </div>
+          <div class="list">
+              <h3>公司</h3>
+              <ul>
+                  <li>公司首页</li>
+                  <li>公司概况</li>
+                  <li>公司动态</li>
+                  <li>管理团队</li>
+                  <li>企业文化</li>
+                  <li>粉丝专区</li>
+                  <li>荣誉之旅</li>
+                  <li>联系我们</li>
+                  <li>投资商</li>
+                  <li>UC闪屏</li>
+              </ul>
+          </div>
+          <div class="list">
+              <h3>其他产品</h3>
+              <ul>
+                  <li>UC九游</li>
+                  <li>PP助手</li>
+                  <li>神马搜索</li>
+                  <li>UC云</li>
+                  <li>U点充值</li>
+                  <li>用户中心</li>
+                  <li>体验中心</li>
+                  <li>帮助中心</li>
+                  <li>意见反馈</li>
+              </ul>
+          </div>
+          <div class="list">
+              <h3>开放合作</h3>
+              <ul>
+                  <li>游戏开放平台</li>
+                  <li>运营商合作</li>
+                  <li>终端厂商合作</li>
+                  <li>互联网合作</li>
+                  <li>开发者中心</li>
+                  <li>战略投资</li>
+              </ul>
+          </div>
+          <div class="list">
+              <h3>招聘</h3>
+              <ul>
+                  <li>社会招聘</li>
+                  <li>人才招聘</li>
+                  <li>校园招聘</li>
+                  <li>实习生招聘</li>
+                  <li>内部推荐</li>
+                  <li>走进UC</li>
+              </ul>
+          </div>
+          <div class="list">
+              <div class="list">
+                  <div class="xialadan">
+                  <h3>中文版</h3>
+                  </div>
+                  <ul>
+                    <li class="bg1">手机站</li>
+                    <li class="bg2">Pad站</li>
+                    <li class="bg3">TV站</li>
+                    <li class="bg4">UC浏览器微博</li>
+                    <li class="bg5">UC浏览器贴吧</li>
+                    <li class="bg6">UC浏览器微信</li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+        <div class="f_bot">
+          <div class="link">
+          	<ul>
+            	<li>阿里巴巴集团<span>|</span></li>
+                <li>淘宝网<span>|</span></li>
+                <li>天猫<span>|</span></li>
+                <li>聚划算<span>|</span></li>
+                <li>全球速卖通<span>|</span></li>
+                <li>阿里巴巴国际交易市场<span>|</span></li>
+                <li>1688<span>|</span></li>
+                <li>阿里妈妈<span>|</span></li>
+                <li>阿里旅行.去啊<span>|</span></li>
+                <li>阿里云计算<span>|</span></li>
+                <li>YunOS<span>|</span></li>
+                <li>阿里通信<span>|</span></li>
+                <li>万网<span>|</span></li>
+                <li>高德</li>
+            </ul>          	
+          </div>
+        </div>
+        
+    </div>
+</div>
+<div class="footer">
+	          <div class="banquan">
+          	<div class="bq_left">
+            	<p>©2004-2014 uc.cn 版权所有 网络文化经营许可证：文网文[2010]176号
+中华人民共和国互联网药品信息服务资格证：（粤）-非经营性-2011-0120
+增值电信业务经营许可证: 粤B2-20070379 粤ICP备09210879号</p>
+            </div>
+            <div class="bq_right">
+            <img src="images/f_bot_05.jpg" />
+            </div>
+          </div>
+</div>
+</body>
+</html>
